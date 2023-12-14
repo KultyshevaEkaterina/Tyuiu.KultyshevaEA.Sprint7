@@ -16,5 +16,15 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
         {
             InitializeComponent();
         }
+
+        private void buttonHelp_KEA_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAbout_KEA_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
