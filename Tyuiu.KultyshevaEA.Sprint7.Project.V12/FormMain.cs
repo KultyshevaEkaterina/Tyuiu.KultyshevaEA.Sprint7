@@ -24,7 +24,15 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
 
         private void buttonAbout_KEA_Click(object sender, EventArgs e)
         {
+            FormAbout formAbout = new FormAbout();
+            formAbout.ShowDialog();
+        }
 
+        private void buttonFirms_KEA_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormFirms fm = new FormFirms();
+            fm.Show();
         }
     }
 }
