@@ -34,5 +34,12 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             FormFirms fm = new FormFirms();
             fm.Show();
         }
+
+        private void buttonDiagram_KEA_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormChart fm = new FormChart();
+            fm.Show();
+        }
     }
 }

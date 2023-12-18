@@ -37,8 +37,6 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.textBoxSearch_KEA = new System.Windows.Forms.TextBox();
             this.labelSearch_KEA = new System.Windows.Forms.Label();
             this.dataGridViewTable_KEA = new System.Windows.Forms.DataGridView();
-            this.comboBoxSorted_KEA = new System.Windows.Forms.ComboBox();
-            this.comboBoxFiltr_KEA = new System.Windows.Forms.ComboBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +44,8 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboBoxSorted_KEA = new System.Windows.Forms.ComboBox();
+            this.comboBoxFiltr_KEA = new System.Windows.Forms.ComboBox();
             this.buttonDiagram_KEA = new System.Windows.Forms.Button();
             this.buttonFirms_KEA = new System.Windows.Forms.Button();
             this.panelName_KEA.SuspendLayout();
@@ -127,22 +127,6 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.dataGridViewTable_KEA.Size = new System.Drawing.Size(782, 360);
             this.dataGridViewTable_KEA.TabIndex = 5;
             // 
-            // comboBoxSorted_KEA
-            // 
-            this.comboBoxSorted_KEA.FormattingEnabled = true;
-            this.comboBoxSorted_KEA.Location = new System.Drawing.Point(807, 349);
-            this.comboBoxSorted_KEA.Name = "comboBoxSorted_KEA";
-            this.comboBoxSorted_KEA.Size = new System.Drawing.Size(260, 21);
-            this.comboBoxSorted_KEA.TabIndex = 6;
-            // 
-            // comboBoxFiltr_KEA
-            // 
-            this.comboBoxFiltr_KEA.FormattingEnabled = true;
-            this.comboBoxFiltr_KEA.Location = new System.Drawing.Point(807, 286);
-            this.comboBoxFiltr_KEA.Name = "comboBoxFiltr_KEA";
-            this.comboBoxFiltr_KEA.Size = new System.Drawing.Size(260, 21);
-            this.comboBoxFiltr_KEA.TabIndex = 7;
-            // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
@@ -199,6 +183,22 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.Column7.ReadOnly = true;
             this.Column7.Width = 197;
             // 
+            // comboBoxSorted_KEA
+            // 
+            this.comboBoxSorted_KEA.FormattingEnabled = true;
+            this.comboBoxSorted_KEA.Location = new System.Drawing.Point(807, 349);
+            this.comboBoxSorted_KEA.Name = "comboBoxSorted_KEA";
+            this.comboBoxSorted_KEA.Size = new System.Drawing.Size(260, 21);
+            this.comboBoxSorted_KEA.TabIndex = 6;
+            // 
+            // comboBoxFiltr_KEA
+            // 
+            this.comboBoxFiltr_KEA.FormattingEnabled = true;
+            this.comboBoxFiltr_KEA.Location = new System.Drawing.Point(807, 286);
+            this.comboBoxFiltr_KEA.Name = "comboBoxFiltr_KEA";
+            this.comboBoxFiltr_KEA.Size = new System.Drawing.Size(260, 21);
+            this.comboBoxFiltr_KEA.TabIndex = 7;
+            // 
             // buttonDiagram_KEA
             // 
             this.buttonDiagram_KEA.BackColor = System.Drawing.Color.Silver;
@@ -209,6 +209,7 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.buttonDiagram_KEA.TabIndex = 8;
             this.buttonDiagram_KEA.Text = "Построить диаграмму";
             this.buttonDiagram_KEA.UseVisualStyleBackColor = false;
+            this.buttonDiagram_KEA.Click += new System.EventHandler(this.buttonDiagram_KEA_Click);
             // 
             // buttonFirms_KEA
             // 
