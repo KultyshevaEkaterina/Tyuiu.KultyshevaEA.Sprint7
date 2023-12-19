@@ -101,6 +101,7 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.textBoxSearch_KEA.Name = "textBoxSearch_KEA";
             this.textBoxSearch_KEA.Size = new System.Drawing.Size(288, 43);
             this.textBoxSearch_KEA.TabIndex = 3;
+            this.textBoxSearch_KEA.TextChanged += new System.EventHandler(this.textBoxSearch_KEA_TextChanged);
             // 
             // labelSearch_KEA
             // 
@@ -126,6 +127,7 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.dataGridViewTable_KEA.Name = "dataGridViewTable_KEA";
             this.dataGridViewTable_KEA.Size = new System.Drawing.Size(782, 360);
             this.dataGridViewTable_KEA.TabIndex = 5;
+            this.dataGridViewTable_KEA.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTable_KEA_CellContentClick);
             // 
             // Column1
             // 
