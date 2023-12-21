@@ -146,5 +146,36 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
                 MessageBox.Show("Файл не сохранен", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void buttonAdd_KEA_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dataGridViewTable_KEA.Rows.Add();
+            }
+            catch
+            {
+                MessageBox.Show("Невозможно добавить данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonDel_KEA_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewTable_KEA.RowCount != 0)
+            {
+                int valueDel = 0;
+                var res = MessageBox.Show($"{"Удалить данную строку?"}", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (res == DialogResult.Yes) valueDel = 1;
+                if (valueDel == 1)
+                {
+                    int del = dataGridViewTable_KEA.CurrentCell.RowIndex;
+                    dataGridViewTable_KEA.Rows.Remove(dataGridViewTable_KEA.Rows[del]);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Строка не выбрана", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

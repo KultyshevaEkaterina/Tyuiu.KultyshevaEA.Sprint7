@@ -148,7 +148,7 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             // comboBoxFiltr_KEA
             // 
             this.comboBoxFiltr_KEA.FormattingEnabled = true;
-            this.comboBoxFiltr_KEA.Location = new System.Drawing.Point(807, 292);
+            this.comboBoxFiltr_KEA.Location = new System.Drawing.Point(807, 289);
             this.comboBoxFiltr_KEA.Name = "comboBoxFiltr_KEA";
             this.comboBoxFiltr_KEA.Size = new System.Drawing.Size(260, 21);
             this.comboBoxFiltr_KEA.TabIndex = 7;
@@ -210,6 +210,7 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.buttonAdd_KEA.TabIndex = 12;
             this.toolTip_KEA.SetToolTip(this.buttonAdd_KEA, "Добавить строку");
             this.buttonAdd_KEA.UseVisualStyleBackColor = true;
+            this.buttonAdd_KEA.Click += new System.EventHandler(this.buttonAdd_KEA_Click);
             // 
             // buttonDel_KEA
             // 
@@ -220,6 +221,7 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.buttonDel_KEA.TabIndex = 13;
             this.toolTip_KEA.SetToolTip(this.buttonDel_KEA, "Удалить строку");
             this.buttonDel_KEA.UseVisualStyleBackColor = true;
+            this.buttonDel_KEA.Click += new System.EventHandler(this.buttonDel_KEA_Click);
             // 
             // toolTip_KEA
             // 
