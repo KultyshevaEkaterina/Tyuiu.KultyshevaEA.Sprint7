@@ -29,6 +29,8 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
 
         private void buttonHelp_KEA_Click(object sender, EventArgs e)
         {
+            FormGuide formguide = new FormGuide();
+            formguide.ShowDialog();
 
         }
 

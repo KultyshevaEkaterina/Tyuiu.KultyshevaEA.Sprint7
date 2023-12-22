@@ -38,6 +38,12 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.textBoxSearch_KEA = new System.Windows.Forms.TextBox();
             this.labelSearch_KEA = new System.Windows.Forms.Label();
             this.dataGridViewTable_KEA = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBoxSorted_KEA = new System.Windows.Forms.ComboBox();
             this.comboBoxFiltr_KEA = new System.Windows.Forms.ComboBox();
             this.buttonDiagram_KEA = new System.Windows.Forms.Button();
@@ -49,12 +55,6 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.toolTip_KEA = new System.Windows.Forms.ToolTip(this.components);
             this.openFileDialogMain_KEA = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialogMain_KEA = new System.Windows.Forms.SaveFileDialog();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelName_KEA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTable_KEA)).BeginInit();
             this.SuspendLayout();
@@ -133,9 +133,58 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.Column6});
             this.dataGridViewTable_KEA.Location = new System.Drawing.Point(12, 249);
             this.dataGridViewTable_KEA.Name = "dataGridViewTable_KEA";
+            this.dataGridViewTable_KEA.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.dataGridViewTable_KEA.Size = new System.Drawing.Size(782, 360);
             this.dataGridViewTable_KEA.TabIndex = 5;
             this.dataGridViewTable_KEA.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTable_KEA_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column1.HeaderText = "Фирма-изготовитель";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 141;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column2.HeaderText = "Тип процессора";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 105;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column3.HeaderText = "Тактовая частота";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 112;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column4.HeaderText = "Объем ОЗУ";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 86;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column5.HeaderText = "Объём жёсткого диска";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 138;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column6.HeaderText = "Дата выпуска";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 96;
             // 
             // comboBoxSorted_KEA
             // 
@@ -233,54 +282,6 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             // openFileDialogMain_KEA
             // 
             this.openFileDialogMain_KEA.FileName = "openFileDialog1";
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column1.HeaderText = "Фирма-изготовитель";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 141;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column2.HeaderText = "Тип процессора";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 105;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column3.HeaderText = "Тактовая частота";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 112;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column4.HeaderText = "Объем ОЗУ";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 86;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column5.HeaderText = "Объём жёсткого диска";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 138;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column6.HeaderText = "Дата выпуска";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 96;
             // 
             // FormMain
             // 

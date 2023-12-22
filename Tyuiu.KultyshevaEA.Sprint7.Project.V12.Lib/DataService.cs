@@ -11,7 +11,7 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12.Lib
     public class DataService
 
     {
-        public string [,] LoadFromDataFile(string path)
+        public string[,] LoadFromDataFile(string path)
         {
             string[] str = File.ReadAllLines(path);
 
