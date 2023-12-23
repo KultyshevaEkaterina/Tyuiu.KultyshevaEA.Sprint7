@@ -1,7 +1,7 @@
 ﻿
 namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
 {
-    partial class FormGuide_KEA
+    partial class FormGuide
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGuide_KEA));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGuide));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonBack_KEA = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -56,7 +56,7 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.buttonBack_KEA.UseVisualStyleBackColor = true;
             this.buttonBack_KEA.Click += new System.EventHandler(this.buttonBack_KEA_Click);
             // 
-            // FormGuide_KEA
+            // FormGuide
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -66,7 +66,7 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.Controls.Add(this.textBox1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FormGuide_KEA";
+            this.Name = "FormGuide";
             this.Text = "Руководство пользователя";
             this.ResumeLayout(false);
             this.PerformLayout();

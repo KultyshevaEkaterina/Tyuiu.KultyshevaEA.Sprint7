@@ -29,9 +29,9 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
 
         private void buttonHelp_KEA_Click(object sender, EventArgs e)
         {
-            FormGuide formguide = new FormGuide();
-            formguide.ShowDialog();
-
+            this.Hide();
+            FormGuide fg = new FormGuide();
+            fg.Show();
         }
 
         private void buttonAbout_KEA_Click(object sender, EventArgs e)
@@ -56,20 +56,23 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
 
         private void textBoxSearch_KEA_TextChanged(object sender, EventArgs e)
         {
-            string searchText = textBoxSearch_KEA.Text.ToLower(); // Получаем текст из TextBox и преобразуем его в нижний регистр для поиска без учета регистра
-
-            foreach (DataGridViewRow row in dataGridViewTable_KEA.Rows) // Перебираем все строки в DataGridView
+            string searchText = textBoxSearch_KEA.Text.ToLower(); //приведение к нижнему регистру
+            foreach (DataGridViewRow row in dataGridViewTable_KEA.Rows)
             {
-                foreach (DataGridViewCell cell in row.Cells) // Перебираем все ячейки в текущей строке
+                if (row.Cells["Firma"].Value != null && row.Cells["Processor"].Value != null && row.Cells["Takt"].Value != null)
                 {
-                    if (cell.Value != null && cell.Value.ToString().ToLower().Contains(searchText)) // Проверяем, содержит ли значение ячейки искомый текст
+                    string column1Text = row.Cells["Firma"].Value.ToString().ToLower();
+                    string column2Text = row.Cells["Processor"].Value.ToString().ToLower();
+                    string column3Text = row.Cells["Takt"].Value.ToString().ToLower();
+
+
+                    if (column1Text.Contains(searchText) || column2Text.Contains(searchText) || column3Text.Contains(searchText))
                     {
-                        row.Visible = true; // Показываем строку, если найден искомый текст
-                        break;
+                        row.Visible = true;
                     }
                     else
                     {
-                        row.Visible = false; // Скрываем строку, если искомый текст не найден
+                        row.Visible = false;
                     }
                 }
             }
@@ -177,6 +180,66 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             else
             {
                 MessageBox.Show("Строка не выбрана", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void comboBoxFiltr_KEA_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxFiltr_KEA.SelectedItem != null)
+            {
+                int columnIndex = 2;
+                string selectedItem = comboBoxFiltr_KEA.SelectedItem.ToString();
+                foreach (DataGridViewRow row in dataGridViewTable_KEA.Rows)
+                {
+                    int cellValue;
+                    if (row.Cells[columnIndex].Value != null && int.TryParse(row.Cells[columnIndex].Value.ToString(), out cellValue))
+                    {
+                        row.Cells[columnIndex].Value = cellValue;
+                    }
+                    else
+                    {
+
+                    }
+                }
+                try
+                {
+                    DataGridViewColumn column = dataGridViewTable_KEA.Columns[4];
+
+                    if (selectedItem == "Min")
+                    {
+                        dataGridViewTable_KEA.Sort(column, ListSortDirection.Ascending);
+                    }
+                    if (selectedItem == "Max")
+                    {
+                        dataGridViewTable_KEA.Sort(column, ListSortDirection.Descending);
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Невозможно выполнить сортировку", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void comboBoxSorted_KEA_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string valueFilt = comboBoxSorted_KEA.SelectedItem.ToString(); //извлечение строкового значения выбранного элемента ComboBox
+            if (!string.IsNullOrEmpty(valueFilt))
+            {
+                foreach (DataGridViewRow row in dataGridViewTable_KEA.Rows)
+                {
+                    if (!row.IsNewRow) // проверка новая ли строка
+                    {
+                        if (row.Cells["Processor"].Value != null && row.Cells["Processor"].Value.ToString() == valueFilt)
+                        {
+                            row.Visible = true;
+                        }
+                        else
+                        {
+                            row.Visible = false;
+                        }
+                    }
+                }
             }
         }
     }

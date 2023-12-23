@@ -38,12 +38,6 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.textBoxSearch_KEA = new System.Windows.Forms.TextBox();
             this.labelSearch_KEA = new System.Windows.Forms.Label();
             this.dataGridViewTable_KEA = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBoxSorted_KEA = new System.Windows.Forms.ComboBox();
             this.comboBoxFiltr_KEA = new System.Windows.Forms.ComboBox();
             this.buttonDiagram_KEA = new System.Windows.Forms.Button();
@@ -55,6 +49,15 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.toolTip_KEA = new System.Windows.Forms.ToolTip(this.components);
             this.openFileDialogMain_KEA = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialogMain_KEA = new System.Windows.Forms.SaveFileDialog();
+            this.labelMemories_KEA = new System.Windows.Forms.Label();
+            this.labelType_KEA = new System.Windows.Forms.Label();
+            this.Firma = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Processor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Takt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OZU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Disk = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelName_KEA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTable_KEA)).BeginInit();
             this.SuspendLayout();
@@ -123,14 +126,16 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             // 
             // dataGridViewTable_KEA
             // 
+            this.dataGridViewTable_KEA.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridViewTable_KEA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTable_KEA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
+            this.Firma,
+            this.Processor,
+            this.Takt,
+            this.OZU,
+            this.Disk,
+            this.Date,
+            this.Price});
             this.dataGridViewTable_KEA.Location = new System.Drawing.Point(12, 249);
             this.dataGridViewTable_KEA.Name = "dataGridViewTable_KEA";
             this.dataGridViewTable_KEA.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
@@ -138,69 +143,31 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.dataGridViewTable_KEA.TabIndex = 5;
             this.dataGridViewTable_KEA.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTable_KEA_CellContentClick);
             // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column1.HeaderText = "Фирма-изготовитель";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 141;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column2.HeaderText = "Тип процессора";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 105;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column3.HeaderText = "Тактовая частота";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 112;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column4.HeaderText = "Объем ОЗУ";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 86;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column5.HeaderText = "Объём жёсткого диска";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 138;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column6.HeaderText = "Дата выпуска";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 96;
-            // 
             // comboBoxSorted_KEA
             // 
             this.comboBoxSorted_KEA.FormattingEnabled = true;
-            this.comboBoxSorted_KEA.Location = new System.Drawing.Point(807, 349);
+            this.comboBoxSorted_KEA.Items.AddRange(new object[] {
+            "POWER-1",
+            "POWER-2",
+            "POWER-4",
+            "Pentium-IV"});
+            this.comboBoxSorted_KEA.Location = new System.Drawing.Point(807, 350);
             this.comboBoxSorted_KEA.Name = "comboBoxSorted_KEA";
-            this.comboBoxSorted_KEA.Size = new System.Drawing.Size(260, 21);
+            this.comboBoxSorted_KEA.Size = new System.Drawing.Size(288, 21);
             this.comboBoxSorted_KEA.TabIndex = 6;
+            this.comboBoxSorted_KEA.SelectedIndexChanged += new System.EventHandler(this.comboBoxSorted_KEA_SelectedIndexChanged);
             // 
             // comboBoxFiltr_KEA
             // 
             this.comboBoxFiltr_KEA.FormattingEnabled = true;
-            this.comboBoxFiltr_KEA.Location = new System.Drawing.Point(807, 289);
+            this.comboBoxFiltr_KEA.Items.AddRange(new object[] {
+            "Min",
+            "Max"});
+            this.comboBoxFiltr_KEA.Location = new System.Drawing.Point(807, 282);
             this.comboBoxFiltr_KEA.Name = "comboBoxFiltr_KEA";
-            this.comboBoxFiltr_KEA.Size = new System.Drawing.Size(260, 21);
+            this.comboBoxFiltr_KEA.Size = new System.Drawing.Size(288, 21);
             this.comboBoxFiltr_KEA.TabIndex = 7;
+            this.comboBoxFiltr_KEA.SelectedIndexChanged += new System.EventHandler(this.comboBoxFiltr_KEA_SelectedIndexChanged);
             // 
             // buttonDiagram_KEA
             // 
@@ -283,12 +250,82 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             // 
             this.openFileDialogMain_KEA.FileName = "openFileDialog1";
             // 
+            // labelMemories_KEA
+            // 
+            this.labelMemories_KEA.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMemories_KEA.Location = new System.Drawing.Point(803, 249);
+            this.labelMemories_KEA.Name = "labelMemories_KEA";
+            this.labelMemories_KEA.Size = new System.Drawing.Size(231, 30);
+            this.labelMemories_KEA.TabIndex = 14;
+            this.labelMemories_KEA.Text = "Фильтр по тактовой частоте\r\n\r\n";
+            // 
+            // labelType_KEA
+            // 
+            this.labelType_KEA.AutoSize = true;
+            this.labelType_KEA.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelType_KEA.Location = new System.Drawing.Point(803, 326);
+            this.labelType_KEA.Name = "labelType_KEA";
+            this.labelType_KEA.Size = new System.Drawing.Size(129, 21);
+            this.labelType_KEA.TabIndex = 15;
+            this.labelType_KEA.Text = "Тип процессора:";
+            // 
+            // Firma
+            // 
+            this.Firma.Frozen = true;
+            this.Firma.HeaderText = "Фирма-изготовитель";
+            this.Firma.Name = "Firma";
+            this.Firma.Width = 141;
+            // 
+            // Processor
+            // 
+            this.Processor.Frozen = true;
+            this.Processor.HeaderText = "Тип процессора";
+            this.Processor.Name = "Processor";
+            this.Processor.Width = 105;
+            // 
+            // Takt
+            // 
+            this.Takt.Frozen = true;
+            this.Takt.HeaderText = "Тактовая частота";
+            this.Takt.Name = "Takt";
+            this.Takt.Width = 112;
+            // 
+            // OZU
+            // 
+            this.OZU.Frozen = true;
+            this.OZU.HeaderText = "Объём ОЗУ";
+            this.OZU.Name = "OZU";
+            this.OZU.Width = 86;
+            // 
+            // Disk
+            // 
+            this.Disk.Frozen = true;
+            this.Disk.HeaderText = "Объём жесткого диска";
+            this.Disk.Name = "Disk";
+            this.Disk.Width = 111;
+            // 
+            // Date
+            // 
+            this.Date.Frozen = true;
+            this.Date.HeaderText = "Дата выпуска";
+            this.Date.Name = "Date";
+            this.Date.Width = 96;
+            // 
+            // Price
+            // 
+            this.Price.Frozen = true;
+            this.Price.HeaderText = "Стоимость";
+            this.Price.Name = "Price";
+            this.Price.Width = 87;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1107, 621);
+            this.Controls.Add(this.labelType_KEA);
+            this.Controls.Add(this.labelMemories_KEA);
             this.Controls.Add(this.buttonDel_KEA);
             this.Controls.Add(this.buttonAdd_KEA);
             this.Controls.Add(this.buttonSave_KEA);
@@ -329,12 +366,15 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
         private System.Windows.Forms.ToolTip toolTip_KEA;
         private System.Windows.Forms.OpenFileDialog openFileDialogMain_KEA;
         private System.Windows.Forms.SaveFileDialog saveFileDialogMain_KEA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Label labelMemories_KEA;
+        private System.Windows.Forms.Label labelType_KEA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Firma;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Processor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Takt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OZU;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Disk;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
     }
 }
 

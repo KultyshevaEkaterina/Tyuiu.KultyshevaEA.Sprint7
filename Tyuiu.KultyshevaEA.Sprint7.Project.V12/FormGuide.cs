@@ -10,16 +10,18 @@ using System.Windows.Forms;
 
 namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
 {
-    public partial class FormGuide_KEA : Form
+    public partial class FormGuide : Form
     {
-        public FormGuide_KEA()
+        public FormGuide()
         {
             InitializeComponent();
         }
 
         private void buttonBack_KEA_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            FormMain fm = new FormMain();
+            fm.Show();
         }
     }
 }

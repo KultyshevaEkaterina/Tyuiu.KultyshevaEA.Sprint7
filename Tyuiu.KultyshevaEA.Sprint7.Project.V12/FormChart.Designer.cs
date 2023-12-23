@@ -38,6 +38,13 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.buttonBack_KEA = new System.Windows.Forms.Button();
             this.panelDown_KEA = new System.Windows.Forms.Panel();
             this.chartAVM_KEA = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.textBoxMin_KEA = new System.Windows.Forms.TextBox();
+            this.labelMin_KEA = new System.Windows.Forms.Label();
+            this.labelMid_KEA = new System.Windows.Forms.Label();
+            this.textBoxMid_KEA = new System.Windows.Forms.TextBox();
+            this.labelMax_KEA = new System.Windows.Forms.Label();
+            this.textBoxMax_KEA = new System.Windows.Forms.TextBox();
+            this.buttonDone_KEA = new System.Windows.Forms.Button();
             this.panelName_KEA.SuspendLayout();
             this.panelDown_KEA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartAVM_KEA)).BeginInit();
@@ -75,6 +82,13 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             // panelDown_KEA
             // 
             this.panelDown_KEA.BackColor = System.Drawing.Color.Silver;
+            this.panelDown_KEA.Controls.Add(this.buttonDone_KEA);
+            this.panelDown_KEA.Controls.Add(this.textBoxMax_KEA);
+            this.panelDown_KEA.Controls.Add(this.labelMax_KEA);
+            this.panelDown_KEA.Controls.Add(this.textBoxMid_KEA);
+            this.panelDown_KEA.Controls.Add(this.labelMid_KEA);
+            this.panelDown_KEA.Controls.Add(this.labelMin_KEA);
+            this.panelDown_KEA.Controls.Add(this.textBoxMin_KEA);
             this.panelDown_KEA.Controls.Add(this.buttonBack_KEA);
             this.panelDown_KEA.Location = new System.Drawing.Point(796, 135);
             this.panelDown_KEA.Name = "panelDown_KEA";
@@ -97,6 +111,79 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.chartAVM_KEA.Size = new System.Drawing.Size(763, 474);
             this.chartAVM_KEA.TabIndex = 3;
             // 
+            // textBoxMin_KEA
+            // 
+            this.textBoxMin_KEA.BackColor = System.Drawing.Color.White;
+            this.textBoxMin_KEA.Location = new System.Drawing.Point(37, 52);
+            this.textBoxMin_KEA.Multiline = true;
+            this.textBoxMin_KEA.Name = "textBoxMin_KEA";
+            this.textBoxMin_KEA.ReadOnly = true;
+            this.textBoxMin_KEA.Size = new System.Drawing.Size(225, 37);
+            this.textBoxMin_KEA.TabIndex = 4;
+            this.textBoxMin_KEA.TextChanged += new System.EventHandler(this.textBoxMin_KEA_TextChanged);
+            // 
+            // labelMin_KEA
+            // 
+            this.labelMin_KEA.AutoSize = true;
+            this.labelMin_KEA.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMin_KEA.Location = new System.Drawing.Point(32, 23);
+            this.labelMin_KEA.Name = "labelMin_KEA";
+            this.labelMin_KEA.Size = new System.Drawing.Size(150, 26);
+            this.labelMin_KEA.TabIndex = 5;
+            this.labelMin_KEA.Text = "Мин.стоимость:";
+            // 
+            // labelMid_KEA
+            // 
+            this.labelMid_KEA.AutoSize = true;
+            this.labelMid_KEA.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMid_KEA.Location = new System.Drawing.Point(32, 92);
+            this.labelMid_KEA.Name = "labelMid_KEA";
+            this.labelMid_KEA.Size = new System.Drawing.Size(139, 26);
+            this.labelMid_KEA.TabIndex = 6;
+            this.labelMid_KEA.Text = "Ср. стоимость:";
+            // 
+            // textBoxMid_KEA
+            // 
+            this.textBoxMid_KEA.BackColor = System.Drawing.Color.White;
+            this.textBoxMid_KEA.Location = new System.Drawing.Point(37, 121);
+            this.textBoxMid_KEA.Multiline = true;
+            this.textBoxMid_KEA.Name = "textBoxMid_KEA";
+            this.textBoxMid_KEA.ReadOnly = true;
+            this.textBoxMid_KEA.Size = new System.Drawing.Size(225, 36);
+            this.textBoxMid_KEA.TabIndex = 7;
+            // 
+            // labelMax_KEA
+            // 
+            this.labelMax_KEA.AutoSize = true;
+            this.labelMax_KEA.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMax_KEA.Location = new System.Drawing.Point(32, 160);
+            this.labelMax_KEA.Name = "labelMax_KEA";
+            this.labelMax_KEA.Size = new System.Drawing.Size(156, 26);
+            this.labelMax_KEA.TabIndex = 8;
+            this.labelMax_KEA.Text = "Макс.стоимость:";
+            // 
+            // textBoxMax_KEA
+            // 
+            this.textBoxMax_KEA.BackColor = System.Drawing.Color.White;
+            this.textBoxMax_KEA.Location = new System.Drawing.Point(37, 189);
+            this.textBoxMax_KEA.Multiline = true;
+            this.textBoxMax_KEA.Name = "textBoxMax_KEA";
+            this.textBoxMax_KEA.ReadOnly = true;
+            this.textBoxMax_KEA.Size = new System.Drawing.Size(225, 34);
+            this.textBoxMax_KEA.TabIndex = 9;
+            // 
+            // buttonDone_KEA
+            // 
+            this.buttonDone_KEA.BackColor = System.Drawing.Color.LavenderBlush;
+            this.buttonDone_KEA.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDone_KEA.Location = new System.Drawing.Point(65, 240);
+            this.buttonDone_KEA.Name = "buttonDone_KEA";
+            this.buttonDone_KEA.Size = new System.Drawing.Size(158, 34);
+            this.buttonDone_KEA.TabIndex = 10;
+            this.buttonDone_KEA.Text = "ВЫПОЛНИТЬ";
+            this.buttonDone_KEA.UseVisualStyleBackColor = false;
+            this.buttonDone_KEA.Click += new System.EventHandler(this.buttonDone_KEA_Click);
+            // 
             // FormChart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,6 +196,7 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.Name = "FormChart";
             this.panelName_KEA.ResumeLayout(false);
             this.panelDown_KEA.ResumeLayout(false);
+            this.panelDown_KEA.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartAVM_KEA)).EndInit();
             this.ResumeLayout(false);
 
@@ -121,5 +209,12 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
         private System.Windows.Forms.Button buttonBack_KEA;
         private System.Windows.Forms.Panel panelDown_KEA;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartAVM_KEA;
+        private System.Windows.Forms.Label labelMax_KEA;
+        private System.Windows.Forms.TextBox textBoxMid_KEA;
+        private System.Windows.Forms.Label labelMid_KEA;
+        private System.Windows.Forms.Label labelMin_KEA;
+        private System.Windows.Forms.TextBox textBoxMin_KEA;
+        private System.Windows.Forms.TextBox textBoxMax_KEA;
+        private System.Windows.Forms.Button buttonDone_KEA;
     }
 }

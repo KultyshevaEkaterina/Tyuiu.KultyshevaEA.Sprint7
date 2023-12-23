@@ -75,14 +75,14 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
 
         private void comboBoxFiltrs_KEA_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBoxCity_KEA.Items.Add("Москва");
-            comboBoxCity_KEA.Items.Add("Уфа");
-            comboBoxCity_KEA.Items.Add("Екатеринбург");
-            comboBoxCity_KEA.Items.Add("Зеленоград");
+            //comboBoxCity_KEA.Items.Add("Москва");
+            //comboBoxCity_KEA.Items.Add("Уфа");
+            //comboBoxCity_KEA.Items.Add("Екатеринбург");
+            //comboBoxCity_KEA.Items.Add("Зеленоград");
             // Добавьте все доступные города в ComboBox
 
             // Привязка события выбора элемента
-            comboBoxCity_KEA.SelectedIndexChanged += ComboBoxCity_SelectedIndexChanged;
+            //comboBoxCity_KEA.SelectedIndexChanged += ComboBoxCity_SelectedIndexChanged;
         }
 
             // Метод-обработчик события выбора элемента
@@ -95,6 +95,27 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
                 // Например, если у вас есть DataGridView с именем dataGridView, можете использовать фильтрацию так:
                 ((DataTable)dataGridViewFirms_KEA.DataSource).DefaultView.RowFilter = $"Город = '{selectedCity}'";
         }
-        
+
+        private void comboBoxName_KEA_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string valueFilt = comboBoxName_KEA.SelectedItem.ToString(); //извлечение строкового значения выбранного элемента ComboBox
+            if (!string.IsNullOrEmpty(valueFilt))
+            {
+                foreach (DataGridViewRow row in dataGridViewFirms_KEA.Rows)
+                {
+                    if (!row.IsNewRow) // проверка новая ли строка
+                    {
+                        if (row.Cells["Category"].Value != null && row.Cells["Category"].Value.ToString() == valueFilt)
+                        {
+                            row.Visible = true;
+                        }
+                        else
+                        {
+                            row.Visible = false;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

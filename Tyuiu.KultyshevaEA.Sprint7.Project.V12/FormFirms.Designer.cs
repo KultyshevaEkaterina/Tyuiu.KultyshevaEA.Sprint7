@@ -79,9 +79,11 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.comboBoxCity_KEA.FormattingEnabled = true;
             this.comboBoxCity_KEA.Items.AddRange(new object[] {
             "Москва",
-            "Уфа",
+            "Тюмень",
             "Екатеринбург",
-            "Зеленоград"});
+            "Когалым",
+            "Санкт-Петербург",
+            "Новосибирск"});
             this.comboBoxCity_KEA.Location = new System.Drawing.Point(875, 204);
             this.comboBoxCity_KEA.Name = "comboBoxCity_KEA";
             this.comboBoxCity_KEA.Size = new System.Drawing.Size(184, 21);
@@ -111,10 +113,16 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             // comboBoxName_KEA
             // 
             this.comboBoxName_KEA.FormattingEnabled = true;
+            this.comboBoxName_KEA.Items.AddRange(new object[] {
+            "POWER-1",
+            "POWER-2",
+            "POWER-4",
+            "Pentium-IV"});
             this.comboBoxName_KEA.Location = new System.Drawing.Point(875, 273);
             this.comboBoxName_KEA.Name = "comboBoxName_KEA";
             this.comboBoxName_KEA.Size = new System.Drawing.Size(184, 21);
             this.comboBoxName_KEA.TabIndex = 5;
+            this.comboBoxName_KEA.SelectedIndexChanged += new System.EventHandler(this.comboBoxName_KEA_SelectedIndexChanged);
             // 
             // labelCity_KEA
             // 
@@ -122,9 +130,9 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.labelCity_KEA.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelCity_KEA.Location = new System.Drawing.Point(871, 249);
             this.labelCity_KEA.Name = "labelCity_KEA";
-            this.labelCity_KEA.Size = new System.Drawing.Size(139, 21);
+            this.labelCity_KEA.Size = new System.Drawing.Size(191, 21);
             this.labelCity_KEA.TabIndex = 6;
-            this.labelCity_KEA.Text = "Фильтр: Название";
+            this.labelCity_KEA.Text = "Фильтр: Название товара";
             // 
             // buttonOpen_KEA
             // 
