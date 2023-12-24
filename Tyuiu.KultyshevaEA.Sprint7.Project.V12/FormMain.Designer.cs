@@ -161,8 +161,8 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             // 
             this.comboBoxFiltr_KEA.FormattingEnabled = true;
             this.comboBoxFiltr_KEA.Items.AddRange(new object[] {
-            "Min",
-            "Max"});
+            "По возрастанию",
+            "По убыванию"});
             this.comboBoxFiltr_KEA.Location = new System.Drawing.Point(807, 282);
             this.comboBoxFiltr_KEA.Name = "comboBoxFiltr_KEA";
             this.comboBoxFiltr_KEA.Size = new System.Drawing.Size(288, 21);
@@ -302,7 +302,7 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.Disk.Frozen = true;
             this.Disk.HeaderText = "Объём жесткого диска";
             this.Disk.Name = "Disk";
-            this.Disk.Width = 111;
+            this.Disk.Width = 138;
             // 
             // Date
             // 

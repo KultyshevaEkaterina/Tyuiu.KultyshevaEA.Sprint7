@@ -33,19 +33,51 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12.Lib
             return matrix;
         }
 
-        public double AverageValue(double[] arrayNumber)
+        public double CalculateAverage(int[] values)
         {
-            double avg = arrayNumber.Average();
-            return avg;
+            double average = 0;
+
+            double sumAverage = 0;
+
+
+            for (int i = 0; i < values.Length; i++)
+            {
+                sumAverage += values[i];
+            }
+            average = (sumAverage / values.Length);
+
+            return Math.Round(average, 2);
         }
-        public double MinValue(double[] arrayNumber)
+
+
+
+        public double CalculateMin(int[] values)
         {
-            double min = arrayNumber.Min();
+            double min = 10000000;
+
+            for (int i = 0; i < values.Length; i++)
+            {
+                if(values[i]<min)
+                {
+                    min=values[i];
+                }
+            }
+
             return min;
         }
-        public double MaxValue(double[] arrayNumber)
+
+        public double CalculateMax(int[] values)
         {
-            double max = arrayNumber.Max();
+            double max = 0;
+
+            for (int i = 0; i < values.Length; i++)
+            {
+                if (values[i] > max)
+                {
+                    max = values[i];
+                }
+            }
+
             return max;
         }
     }

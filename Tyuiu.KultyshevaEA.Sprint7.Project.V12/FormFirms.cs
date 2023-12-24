@@ -75,37 +75,20 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
 
         private void comboBoxFiltrs_KEA_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //comboBoxCity_KEA.Items.Add("Москва");
-            //comboBoxCity_KEA.Items.Add("Уфа");
-            //comboBoxCity_KEA.Items.Add("Екатеринбург");
-            //comboBoxCity_KEA.Items.Add("Зеленоград");
-            // Добавьте все доступные города в ComboBox
-
-            // Привязка события выбора элемента
-            //comboBoxCity_KEA.SelectedIndexChanged += ComboBoxCity_SelectedIndexChanged;
+             
         }
 
-            // Метод-обработчик события выбора элемента
-        private void ComboBoxCity_SelectedIndexChanged(object sender, EventArgs e)
-        {
-                // Получите выбранный город
-                string selectedCity = comboBoxCity_KEA.SelectedItem.ToString();
-
-                // Произведите фильтрацию данных в таблице на основе выбранного города
-                // Например, если у вас есть DataGridView с именем dataGridView, можете использовать фильтрацию так:
-                ((DataTable)dataGridViewFirms_KEA.DataSource).DefaultView.RowFilter = $"Город = '{selectedCity}'";
-        }
 
         private void comboBoxName_KEA_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string valueFilt = comboBoxName_KEA.SelectedItem.ToString(); //извлечение строкового значения выбранного элемента ComboBox
-            if (!string.IsNullOrEmpty(valueFilt))
+            string selectedCity = comboBoxName_KEA.SelectedItem.ToString(); //извлечение строкового значения выбранного элемента ComboBox
+            if (!string.IsNullOrEmpty(selectedCity))
             {
                 foreach (DataGridViewRow row in dataGridViewFirms_KEA.Rows)
                 {
                     if (!row.IsNewRow) // проверка новая ли строка
                     {
-                        if (row.Cells["Category"].Value != null && row.Cells["Category"].Value.ToString() == valueFilt)
+                        if (row.Cells["Nametov"].Value != null && row.Cells["Nametov"].Value.ToString() == selectedCity)
                         {
                             row.Visible = true;
                         }
@@ -115,6 +98,41 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
                         }
                     }
                 }
+            }
+        }
+
+        private void comboBoxCity_KEA_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedCity = comboBoxCity_KEA.SelectedItem.ToString(); //извлечение строкового значения выбранного элемента ComboBox
+            if (!string.IsNullOrEmpty(selectedCity))
+            {
+                foreach (DataGridViewRow row in dataGridViewFirms_KEA.Rows)
+                {
+                    if (!row.IsNewRow) // проверка новая ли строка
+                    {
+                        if (row.Cells["City"].Value != null && row.Cells["City"].Value.ToString() == selectedCity)
+                        {
+                            row.Visible = true;
+                        }
+                        else
+                        {
+                            row.Visible = false;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void comboBoxPrice_KEA_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedValue = comboBoxPrice_KEA.SelectedItem.ToString();
+            if (selectedValue == "По возрастанию")
+            {
+                dataGridViewFirms_KEA.Sort(dataGridViewFirms_KEA.Columns[5], ListSortDirection.Ascending);
+            }
+            else if (selectedValue == "По убыванию")
+            {
+                dataGridViewFirms_KEA.Sort(dataGridViewFirms_KEA.Columns[5], ListSortDirection.Descending);
             }
         }
     }

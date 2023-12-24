@@ -185,52 +185,27 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
 
         private void comboBoxFiltr_KEA_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxFiltr_KEA.SelectedItem != null)
+            string selectedValue = comboBoxFiltr_KEA.SelectedItem.ToString();
+            if (selectedValue == "По возрастанию")
             {
-                int columnIndex = 2;
-                string selectedItem = comboBoxFiltr_KEA.SelectedItem.ToString();
-                foreach (DataGridViewRow row in dataGridViewTable_KEA.Rows)
-                {
-                    int cellValue;
-                    if (row.Cells[columnIndex].Value != null && int.TryParse(row.Cells[columnIndex].Value.ToString(), out cellValue))
-                    {
-                        row.Cells[columnIndex].Value = cellValue;
-                    }
-                    else
-                    {
-
-                    }
-                }
-                try
-                {
-                    DataGridViewColumn column = dataGridViewTable_KEA.Columns[4];
-
-                    if (selectedItem == "Min")
-                    {
-                        dataGridViewTable_KEA.Sort(column, ListSortDirection.Ascending);
-                    }
-                    if (selectedItem == "Max")
-                    {
-                        dataGridViewTable_KEA.Sort(column, ListSortDirection.Descending);
-                    }
-                }
-                catch
-                {
-                    MessageBox.Show("Невозможно выполнить сортировку", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                dataGridViewTable_KEA.Sort(dataGridViewTable_KEA.Columns[2], ListSortDirection.Ascending);
+            }
+            else if (selectedValue == "По убыванию")
+            {
+                dataGridViewTable_KEA.Sort(dataGridViewTable_KEA.Columns[2], ListSortDirection.Descending);
             }
         }
 
         private void comboBoxSorted_KEA_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string valueFilt = comboBoxSorted_KEA.SelectedItem.ToString(); //извлечение строкового значения выбранного элемента ComboBox
-            if (!string.IsNullOrEmpty(valueFilt))
+            string selectedCity = comboBoxSorted_KEA.SelectedItem.ToString(); //извлечение строкового значения выбранного элемента ComboBox
+            if (!string.IsNullOrEmpty(selectedCity))
             {
                 foreach (DataGridViewRow row in dataGridViewTable_KEA.Rows)
                 {
                     if (!row.IsNewRow) // проверка новая ли строка
                     {
-                        if (row.Cells["Processor"].Value != null && row.Cells["Processor"].Value.ToString() == valueFilt)
+                        if (row.Cells["Processor"].Value != null && row.Cells["Processor"].Value.ToString() == selectedCity)
                         {
                             row.Visible = true;
                         }
