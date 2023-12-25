@@ -45,12 +45,12 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.comboBoxPrice_KEA = new System.Windows.Forms.ComboBox();
             this.labelPrice_KEA = new System.Windows.Forms.Label();
             this.dataGridViewFirms_KEA = new System.Windows.Forms.DataGridView();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nametov = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Adress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Shop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Adress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nametov = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paneldown_KEA = new System.Windows.Forms.Panel();
             this.panelFirm_KEA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFirms_KEA)).BeginInit();
@@ -69,6 +69,7 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             // 
             // labelName_KEA
             // 
+            this.labelName_KEA.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelName_KEA.Font = new System.Drawing.Font("Segoe UI Variable Display", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelName_KEA.Location = new System.Drawing.Point(272, 39);
             this.labelName_KEA.Name = "labelName_KEA";
@@ -207,29 +208,11 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.dataGridViewFirms_KEA.Size = new System.Drawing.Size(743, 459);
             this.dataGridViewFirms_KEA.TabIndex = 1;
             // 
-            // Price
+            // Shop
             // 
-            this.Price.Frozen = true;
-            this.Price.HeaderText = "Стоимость";
-            this.Price.Name = "Price";
-            // 
-            // Nametov
-            // 
-            this.Nametov.Frozen = true;
-            this.Nametov.HeaderText = "Наименование товара";
-            this.Nametov.Name = "Nametov";
-            // 
-            // Phone
-            // 
-            this.Phone.Frozen = true;
-            this.Phone.HeaderText = "Телефон";
-            this.Phone.Name = "Phone";
-            // 
-            // Adress
-            // 
-            this.Adress.Frozen = true;
-            this.Adress.HeaderText = "Адрес";
-            this.Adress.Name = "Adress";
+            this.Shop.Frozen = true;
+            this.Shop.HeaderText = "Название магазина";
+            this.Shop.Name = "Shop";
             // 
             // City
             // 
@@ -237,11 +220,29 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.City.HeaderText = "Город";
             this.City.Name = "City";
             // 
-            // Shop
+            // Adress
             // 
-            this.Shop.Frozen = true;
-            this.Shop.HeaderText = "Название магазина";
-            this.Shop.Name = "Shop";
+            this.Adress.Frozen = true;
+            this.Adress.HeaderText = "Адрес";
+            this.Adress.Name = "Adress";
+            // 
+            // Phone
+            // 
+            this.Phone.Frozen = true;
+            this.Phone.HeaderText = "Телефон";
+            this.Phone.Name = "Phone";
+            // 
+            // Nametov
+            // 
+            this.Nametov.Frozen = true;
+            this.Nametov.HeaderText = "Наименование товара";
+            this.Nametov.Name = "Nametov";
+            // 
+            // Price
+            // 
+            this.Price.Frozen = true;
+            this.Price.HeaderText = "Стоимость";
+            this.Price.Name = "Price";
             // 
             // paneldown_KEA
             // 

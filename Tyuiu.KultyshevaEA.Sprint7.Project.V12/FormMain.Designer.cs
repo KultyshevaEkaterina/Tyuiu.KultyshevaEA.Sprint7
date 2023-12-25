@@ -38,6 +38,13 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.textBoxSearch_KEA = new System.Windows.Forms.TextBox();
             this.labelSearch_KEA = new System.Windows.Forms.Label();
             this.dataGridViewTable_KEA = new System.Windows.Forms.DataGridView();
+            this.Firma = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Processor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Takt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OZU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Disk = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBoxSorted_KEA = new System.Windows.Forms.ComboBox();
             this.comboBoxFiltr_KEA = new System.Windows.Forms.ComboBox();
             this.buttonDiagram_KEA = new System.Windows.Forms.Button();
@@ -51,13 +58,6 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.saveFileDialogMain_KEA = new System.Windows.Forms.SaveFileDialog();
             this.labelMemories_KEA = new System.Windows.Forms.Label();
             this.labelType_KEA = new System.Windows.Forms.Label();
-            this.Firma = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Processor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Takt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OZU = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Disk = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelName_KEA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTable_KEA)).BeginInit();
             this.SuspendLayout();
@@ -68,13 +68,15 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.panelName_KEA.Controls.Add(this.buttonAbout_KEA);
             this.panelName_KEA.Controls.Add(this.buttonHelp_KEA);
             this.panelName_KEA.Controls.Add(this.labelName_KEA);
+            this.panelName_KEA.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelName_KEA.Location = new System.Drawing.Point(0, 0);
             this.panelName_KEA.Name = "panelName_KEA";
-            this.panelName_KEA.Size = new System.Drawing.Size(1114, 117);
+            this.panelName_KEA.Size = new System.Drawing.Size(1107, 117);
             this.panelName_KEA.TabIndex = 0;
             // 
             // buttonAbout_KEA
             // 
+            this.buttonAbout_KEA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAbout_KEA.Image = ((System.Drawing.Image)(resources.GetObject("buttonAbout_KEA.Image")));
             this.buttonAbout_KEA.Location = new System.Drawing.Point(1040, 9);
             this.buttonAbout_KEA.Name = "buttonAbout_KEA";
@@ -86,6 +88,7 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             // 
             // buttonHelp_KEA
             // 
+            this.buttonHelp_KEA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonHelp_KEA.Image = ((System.Drawing.Image)(resources.GetObject("buttonHelp_KEA.Image")));
             this.buttonHelp_KEA.Location = new System.Drawing.Point(979, 9);
             this.buttonHelp_KEA.Name = "buttonHelp_KEA";
@@ -97,6 +100,7 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             // 
             // labelName_KEA
             // 
+            this.labelName_KEA.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelName_KEA.Font = new System.Drawing.Font("Segoe UI Variable Display", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelName_KEA.ForeColor = System.Drawing.Color.Black;
             this.labelName_KEA.Location = new System.Drawing.Point(194, 9);
@@ -142,6 +146,55 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.dataGridViewTable_KEA.Size = new System.Drawing.Size(782, 360);
             this.dataGridViewTable_KEA.TabIndex = 5;
             this.dataGridViewTable_KEA.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTable_KEA_CellContentClick);
+            // 
+            // Firma
+            // 
+            this.Firma.Frozen = true;
+            this.Firma.HeaderText = "Фирма-изготовитель";
+            this.Firma.Name = "Firma";
+            this.Firma.Width = 141;
+            // 
+            // Processor
+            // 
+            this.Processor.Frozen = true;
+            this.Processor.HeaderText = "Тип процессора";
+            this.Processor.Name = "Processor";
+            this.Processor.Width = 105;
+            // 
+            // Takt
+            // 
+            this.Takt.Frozen = true;
+            this.Takt.HeaderText = "Тактовая частота";
+            this.Takt.Name = "Takt";
+            this.Takt.Width = 112;
+            // 
+            // OZU
+            // 
+            this.OZU.Frozen = true;
+            this.OZU.HeaderText = "Объём ОЗУ";
+            this.OZU.Name = "OZU";
+            this.OZU.Width = 86;
+            // 
+            // Disk
+            // 
+            this.Disk.Frozen = true;
+            this.Disk.HeaderText = "Объём жесткого диска";
+            this.Disk.Name = "Disk";
+            this.Disk.Width = 138;
+            // 
+            // Date
+            // 
+            this.Date.Frozen = true;
+            this.Date.HeaderText = "Дата выпуска";
+            this.Date.Name = "Date";
+            this.Date.Width = 96;
+            // 
+            // Price
+            // 
+            this.Price.Frozen = true;
+            this.Price.HeaderText = "Стоимость";
+            this.Price.Name = "Price";
+            this.Price.Width = 87;
             // 
             // comboBoxSorted_KEA
             // 
@@ -268,55 +321,6 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.labelType_KEA.Size = new System.Drawing.Size(129, 21);
             this.labelType_KEA.TabIndex = 15;
             this.labelType_KEA.Text = "Тип процессора:";
-            // 
-            // Firma
-            // 
-            this.Firma.Frozen = true;
-            this.Firma.HeaderText = "Фирма-изготовитель";
-            this.Firma.Name = "Firma";
-            this.Firma.Width = 141;
-            // 
-            // Processor
-            // 
-            this.Processor.Frozen = true;
-            this.Processor.HeaderText = "Тип процессора";
-            this.Processor.Name = "Processor";
-            this.Processor.Width = 105;
-            // 
-            // Takt
-            // 
-            this.Takt.Frozen = true;
-            this.Takt.HeaderText = "Тактовая частота";
-            this.Takt.Name = "Takt";
-            this.Takt.Width = 112;
-            // 
-            // OZU
-            // 
-            this.OZU.Frozen = true;
-            this.OZU.HeaderText = "Объём ОЗУ";
-            this.OZU.Name = "OZU";
-            this.OZU.Width = 86;
-            // 
-            // Disk
-            // 
-            this.Disk.Frozen = true;
-            this.Disk.HeaderText = "Объём жесткого диска";
-            this.Disk.Name = "Disk";
-            this.Disk.Width = 138;
-            // 
-            // Date
-            // 
-            this.Date.Frozen = true;
-            this.Date.HeaderText = "Дата выпуска";
-            this.Date.Name = "Date";
-            this.Date.Width = 96;
-            // 
-            // Price
-            // 
-            this.Price.Frozen = true;
-            this.Price.HeaderText = "Стоимость";
-            this.Price.Name = "Price";
-            this.Price.Width = 87;
             // 
             // FormMain
             // 

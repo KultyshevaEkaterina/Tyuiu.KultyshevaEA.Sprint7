@@ -38,6 +38,8 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.labelName_KEA = new System.Windows.Forms.Label();
             this.buttonBack_KEA = new System.Windows.Forms.Button();
             this.panelDown_KEA = new System.Windows.Forms.Panel();
+            this.buttonReturn_KEA = new System.Windows.Forms.Button();
+            this.buttonOpen_KEA = new System.Windows.Forms.Button();
             this.buttonDone_KEA = new System.Windows.Forms.Button();
             this.textBoxMax_KEA = new System.Windows.Forms.TextBox();
             this.labelMax_KEA = new System.Windows.Forms.Label();
@@ -47,15 +49,13 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.textBoxMin_KEA = new System.Windows.Forms.TextBox();
             this.chartAVM_KEA = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridViewChart_KEA = new System.Windows.Forms.DataGridView();
-            this.buttonOpen_KEA = new System.Windows.Forms.Button();
-            this.openFileDialogChart_KEA = new System.Windows.Forms.OpenFileDialog();
-            this.buttonReturn_KEA = new System.Windows.Forms.Button();
             this.NameofChop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Adress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tovar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.openFileDialogChart_KEA = new System.Windows.Forms.OpenFileDialog();
             this.toolTipChart_KEA = new System.Windows.Forms.ToolTip(this.components);
             this.panelName_KEA.SuspendLayout();
             this.panelDown_KEA.SuspendLayout();
@@ -67,13 +67,15 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             // 
             this.panelName_KEA.BackColor = System.Drawing.Color.LavenderBlush;
             this.panelName_KEA.Controls.Add(this.labelName_KEA);
+            this.panelName_KEA.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelName_KEA.Location = new System.Drawing.Point(0, 0);
             this.panelName_KEA.Name = "panelName_KEA";
-            this.panelName_KEA.Size = new System.Drawing.Size(1363, 136);
+            this.panelName_KEA.Size = new System.Drawing.Size(1359, 136);
             this.panelName_KEA.TabIndex = 0;
             // 
             // labelName_KEA
             // 
+            this.labelName_KEA.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelName_KEA.Font = new System.Drawing.Font("Segoe UI Variable Display", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelName_KEA.Location = new System.Drawing.Point(447, 31);
             this.labelName_KEA.Name = "labelName_KEA";
@@ -85,6 +87,7 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             // 
             // buttonBack_KEA
             // 
+            this.buttonBack_KEA.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.buttonBack_KEA.Image = ((System.Drawing.Image)(resources.GetObject("buttonBack_KEA.Image")));
             this.buttonBack_KEA.Location = new System.Drawing.Point(186, 464);
             this.buttonBack_KEA.Name = "buttonBack_KEA";
@@ -112,6 +115,28 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.panelDown_KEA.Size = new System.Drawing.Size(299, 509);
             this.panelDown_KEA.TabIndex = 3;
             this.panelDown_KEA.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDown_KEA_Paint);
+            // 
+            // buttonReturn_KEA
+            // 
+            this.buttonReturn_KEA.Image = ((System.Drawing.Image)(resources.GetObject("buttonReturn_KEA.Image")));
+            this.buttonReturn_KEA.Location = new System.Drawing.Point(186, 229);
+            this.buttonReturn_KEA.Name = "buttonReturn_KEA";
+            this.buttonReturn_KEA.Size = new System.Drawing.Size(75, 63);
+            this.buttonReturn_KEA.TabIndex = 5;
+            this.toolTipChart_KEA.SetToolTip(this.buttonReturn_KEA, "Вернуть все");
+            this.buttonReturn_KEA.UseVisualStyleBackColor = true;
+            this.buttonReturn_KEA.Click += new System.EventHandler(this.buttonReturn_KEA_Click);
+            // 
+            // buttonOpen_KEA
+            // 
+            this.buttonOpen_KEA.Image = ((System.Drawing.Image)(resources.GetObject("buttonOpen_KEA.Image")));
+            this.buttonOpen_KEA.Location = new System.Drawing.Point(37, 229);
+            this.buttonOpen_KEA.Name = "buttonOpen_KEA";
+            this.buttonOpen_KEA.Size = new System.Drawing.Size(75, 63);
+            this.buttonOpen_KEA.TabIndex = 11;
+            this.toolTipChart_KEA.SetToolTip(this.buttonOpen_KEA, "Открыть файл");
+            this.buttonOpen_KEA.UseVisualStyleBackColor = true;
+            this.buttonOpen_KEA.Click += new System.EventHandler(this.buttonOpen_KEA_Click);
             // 
             // buttonDone_KEA
             // 
@@ -218,32 +243,6 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.dataGridViewChart_KEA.Size = new System.Drawing.Size(642, 509);
             this.dataGridViewChart_KEA.TabIndex = 4;
             // 
-            // buttonOpen_KEA
-            // 
-            this.buttonOpen_KEA.Image = ((System.Drawing.Image)(resources.GetObject("buttonOpen_KEA.Image")));
-            this.buttonOpen_KEA.Location = new System.Drawing.Point(37, 229);
-            this.buttonOpen_KEA.Name = "buttonOpen_KEA";
-            this.buttonOpen_KEA.Size = new System.Drawing.Size(75, 63);
-            this.buttonOpen_KEA.TabIndex = 11;
-            this.toolTipChart_KEA.SetToolTip(this.buttonOpen_KEA, "Открыть файл");
-            this.buttonOpen_KEA.UseVisualStyleBackColor = true;
-            this.buttonOpen_KEA.Click += new System.EventHandler(this.buttonOpen_KEA_Click);
-            // 
-            // openFileDialogChart_KEA
-            // 
-            this.openFileDialogChart_KEA.FileName = "openFileDialog1";
-            // 
-            // buttonReturn_KEA
-            // 
-            this.buttonReturn_KEA.Image = ((System.Drawing.Image)(resources.GetObject("buttonReturn_KEA.Image")));
-            this.buttonReturn_KEA.Location = new System.Drawing.Point(186, 229);
-            this.buttonReturn_KEA.Name = "buttonReturn_KEA";
-            this.buttonReturn_KEA.Size = new System.Drawing.Size(75, 63);
-            this.buttonReturn_KEA.TabIndex = 5;
-            this.toolTipChart_KEA.SetToolTip(this.buttonReturn_KEA, "Вернуть все");
-            this.buttonReturn_KEA.UseVisualStyleBackColor = true;
-            this.buttonReturn_KEA.Click += new System.EventHandler(this.buttonReturn_KEA_Click);
-            // 
             // NameofChop
             // 
             this.NameofChop.Frozen = true;
@@ -279,6 +278,10 @@ namespace Tyuiu.KultyshevaEA.Sprint7.Project.V12
             this.Cost.Frozen = true;
             this.Cost.HeaderText = "Стоимость";
             this.Cost.Name = "Cost";
+            // 
+            // openFileDialogChart_KEA
+            // 
+            this.openFileDialogChart_KEA.FileName = "openFileDialog1";
             // 
             // toolTipChart_KEA
             // 
